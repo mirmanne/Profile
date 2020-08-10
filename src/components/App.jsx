@@ -1,5 +1,6 @@
 import React from "react";
 import Table from "./Table.jsx";
+import '../css/styles.css'
 import {
   BrowserRouter as Router,
   Switch,
