@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Awards from "./Awards";
 import Education from "./Education";
+import Game from "./Game";
 import Projects from "./Skills";
 import Socials from "./Socials.jsx";
 import awards from '../images/awards.jpg';
@@ -37,6 +38,7 @@ import resumepdf from '../resources/AnishManne_Resume.pdf'
 function Table() {
   var [stateA, setStateA] = useState(false);
   var [stateE, setStateE] = useState(false);
+  var [stateG, setStateG] = useState(false);
   var [stateP, setStateP] = useState(false);
   var [stateS, setStateS] = useState(false);
 
@@ -47,6 +49,10 @@ function Table() {
   function togglePopE() {
       setStateE(!stateE);
      };
+
+  function togglePopG() {
+      setStateG(!stateG);
+    };
 
   function togglePopP() {
       setStateP(!stateP);
@@ -80,7 +86,7 @@ function Table() {
           </figure>
         </div>
         <div class="col grid" >
-          <figure class="effect-ruby">
+          <figure class="effect-ruby" onClick={togglePopG}>
             <img src={game} alt="img13"/>
             <figcaption>
               <h2><span>Game</span></h2>
@@ -89,6 +95,7 @@ function Table() {
           </figure>
         </div>
       </div>
+      {stateG ? <Game toggle={togglePopG} /> : null}
       <div class="row align-items-center">
         <div class="col grid" >
           <figure class="effect-ruby" onClick={togglePopP}>
@@ -146,7 +153,7 @@ function Table() {
             <img src={hobbies} alt="img13"/>
             <figcaption>
               <h2><span>Hobbies</span></h2>
-              <p>Activities I enjoy</p>
+              <p>Tennis - music - basketball - playing videogames - cooking</p>
             </figcaption>
           </figure>
         </div>
