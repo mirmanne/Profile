@@ -1,0 +1,412 @@
+.container {
+  width: 100%;
+  align-content: space-evenly;
+  max-width: 100vw;
+}
+
+.row {
+  height: 33.333333333333vh;
+}
+
+.col {
+  /* text-align: center; */
+  margin: auto;
+  height: 100%;
+  line-height: 100%;
+  background-size: 100% 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.name {
+  font-size: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.grid {
+	position: relative;
+	margin: 0 auto;
+	/* padding: 1em 0 4em; */
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	/* margin: 10px 1%; */
+	/* min-width: 320px;
+	max-width: 480px; */
+	height: 100%;
+	width: 100%;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	/* min-height: 100%;
+	max-width: 100%; */
+  height: 100%;
+  width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+figure.effect-ruby {
+	background-color: black;
+}
+
+figure.effect-ruby img {
+	opacity: 0.8;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+}
+
+figure.effect-ruby:hover img {
+	opacity: 0.5;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+figure.effect-ruby h2 {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  /* transform: translate(-50%, -50%); */
+
+	/* margin-top: 20%; */
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	/* -webkit-transform: translate3d(0,20px,0);
+  transform: translate(-50%, -50%); */
+	transform: translate3d(-50%,-50%,0);
+}
+
+figure.effect-ruby p {
+  position: relative;
+  left: 50%;
+  top: 50%;
+	margin: 1em 0 0;
+	padding: 3em;
+	border: 1px solid #fff;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-50%,-50%,0) scale(1.1);
+	transform: translate3d(-50%,-50%,0) scale(1.1);
+}
+
+figure.effect-ruby:hover h2 {
+	-webkit-transform: translate3d(-50%,-80px,0);
+	transform: translate3d(-50%,-80px,0);
+}
+
+figure.effect-ruby:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(-50%,-80px,0) scale(1);
+	transform: translate3d(-50%,-80px,0) scale(1);
+}
+
+figure.effect-ruby.main .profile-pic  {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 13vw;
+  height: 26.8vh;
+	opacity: 0;
+  border-radius: 50%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-50%,0,0) scale(1.1);
+	transform: translate3d(-50%,0,0) scale(1.1);
+}
+
+figure.effect-ruby.main:hover h2 {
+  position: relative;
+  left: 50%;
+  top: 50%;
+	/* -webkit-transform: translate3d(-50%,-110px,0);
+	transform: translate3d(-50%,-110px,0); */
+  transform: translate(-50%, -15vh);
+  transition-duration: 0.8s;
+}
+
+figure.effect-ruby.main:hover .profile-pic{
+	opacity: 1;
+	/* -webkit-transform: translate3d(0,-150px,0) scale(1);
+	transform: translate3d(0,-150px,0) scale(1); */
+  transform: translate(-50%, -15vh);
+  transition-duration: 0.8s;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal_content {
+  background-color: white;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.awardContent {
+  bottom: 20%;
+  overflow-y:auto;
+}
+
+.award_heading {
+  position: fixed;
+  /* Firefox */
+  top: -moz-calc(20% + 3px);
+/* WebKit */
+  top: -webkit-calc(20% + 3px);
+/* Opera */
+  top: -o-calc(20% + 3px);
+/* Standard */
+  top: calc(20% = 3px);
+  width: -webkit-calc(40% - 44px);
+  background: white;
+  padding-top: 22px;
+}
+
+.popupTitle {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+
+/* Socials Page */
+
+.socials {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  /* width: 70px; */
+  text-align: center;
+  text-decoration: none;
+  /* margin: 5% 16.6666% 5px 50px; */
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.3s;
+
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+/* Awards Page */
+
+ul {
+  list-style: none;
+}
+
+h6.awardDate {
+  font-weight: 400;
+  color: rgba(0,0,0,0.6);
+}
+
+li.award {
+  padding-bottom: 24px;
+}
+
+ul.awards {
+  margin-top: 60px;
+}
+
+
+/* Skills Page */
+
+.skills {
+  list-style: none;
+  width: 90%;
+}
+
+.skills li{
+  margin: 20px 20px 20px 40px;
+}
+
+.bar {
+  background: #353b48;
+  display: block;
+  height: 5px;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 3px;
+  box-shadow: 0 0 10px blue;
+}
+
+.bar span {
+  height: 4px;
+  float: left;
+  background: lightgreen;
+}
+.react {
+  width: 70%;
+  animation: react 2s;
+}
+
+.python {
+  width: 80%;
+  animation: python 2s;
+}
+
+.java {
+  width: 60%;
+  animation: java 2s;
+}
+
+.html {
+  width: 80%;
+  animation: html 2s;
+}
+
+.javascript {
+  width: 40%;
+  animation: javascript 2s;
+}
+
+@keyframes react {
+  0% {
+    width: 0%
+  }
+  100% {
+    width: 70%
+  }
+}
+
+@keyframes python {
+  0% {
+    width: 0%
+  }
+  100% {
+    width: 80%
+  }
+}
+
+@keyframes java {
+  0% {
+    width: 0%
+  }
+  100% {
+    width: 60%
+  }
+}
+
+@keyframes html {
+  0% {
+    width: 0%
+  }
+  100% {
+    width: 80%
+  }
+}
+
+@keyframes javascript {
+  0% {
+    width: 0%
+  }
+  100% {
+    width: 40%
+  }
+}
+
+/* Email Page */
+.email {
+  cursor: text;
+  z-index: 2;
+}
