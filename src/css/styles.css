@@ -235,7 +235,7 @@ figure.effect-ruby.main:hover .profile-pic{
 /* Opera */
   top: -o-calc(20% + 3px);
 /* Standard */
-  top: calc(20% = 3px);
+  top: calc(20% + 3px);
   width: -webkit-calc(40% - 44px);
   background: white;
   padding-top: 22px;
