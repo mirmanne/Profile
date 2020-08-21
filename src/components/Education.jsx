@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import northview from '../images/northview.jpg';
 import gatech from '../images/gatech.jpg';
+import gatech1 from '../images/gatech1.jpg';
 
 export default class Education extends Component {
   handleClick = () => {
@@ -15,13 +16,16 @@ render() {
      <table style={{"width":"100%"}}>
        <tr>
          <th>Georgia Tech</th>
-         <td rowSpan={3}><img src={gatech} alt="gatech" style={{"width":"80%", "height":"auto" }}/></td>
+         <td rowSpan={4}><img src={gatech1} alt="gatech" style={{"width":"80%", "height":"auto" }}/></td>
        </tr>
        <tr>
          <td>2020-Present</td>
        </tr>
        <tr>
          <td>B.S. Computer Science</td>
+       </tr>
+       <tr>
+         <td>Threads: Intelligence & Information Internetworks</td>
        </tr>
        <tr>
          <td><br/></td>

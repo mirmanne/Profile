@@ -5,7 +5,40 @@
 }
 
 .row {
-  height: 33.333333333333vh;
+  height: calc(33.333333333333vh - 15px);
+}
+
+.row.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  background: black;
+}
+
+.col.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  max-width: none;
+}
+
+.row.footer p{
+  margin: 0px;
+  padding-left: 10px;
+  color: white;
+  font-family: 'Faster One', cursive;
+  font-size: 40px;
+}
+
+.row.footer p.create {
+  margin: 0px;
+  padding-left: 10px;
+  color: white;
+  font-family: 'Faster One', cursive;
+  font-size: 30px;
 }
 
 .col {
@@ -193,6 +226,10 @@ figure.effect-ruby.main:hover h2 {
   transition-duration: 0.8s;
 }
 
+figure.effect-ruby.main {
+  cursor: default;
+}
+
 figure.effect-ruby.main:hover .profile-pic{
 	opacity: 1;
 	/* -webkit-transform: translate3d(0,-150px,0) scale(1);
@@ -229,13 +266,13 @@ figure.effect-ruby.main:hover .profile-pic{
 .award_heading {
   position: fixed;
   /* Firefox */
-  top: -moz-calc(20% + 3px);
+  top: -moz-calc(20% + 2px);
 /* WebKit */
-  top: -webkit-calc(20% + 3px);
+  top: -webkit-calc(20% + 2px);
 /* Opera */
-  top: -o-calc(20% + 3px);
+  top: -o-calc(20% + 2px);
 /* Standard */
-  top: calc(20% + 3px);
+  top: calc(20% + 2px);
   width: -webkit-calc(40% - 44px);
   background: white;
   padding-top: 22px;
@@ -409,4 +446,22 @@ ul.awards {
 .email {
   cursor: text;
   z-index: 2;
+}
+
+/* Hobbies Page */
+figure.effect-ruby.hobbies {
+  cursor: default;
+}
+
+/* Game Page */
+.game {
+  background-color: black;
+  width: 364px;
+  left: calc(50vw - 182px);
+  height: 524px;
+}
+
+.gameClose {
+  position: absolute;
+  left: 315px;
 }

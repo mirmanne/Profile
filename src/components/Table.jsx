@@ -3,6 +3,7 @@ import Awards from "./Awards";
 import Education from "./Education";
 import Game from "./Game";
 import Projects from "./Skills";
+import Resume from "./Resume";
 import Socials from "./Socials.jsx";
 import awards from '../images/awards.jpg';
 import credit from '../images/credit.jpg';
@@ -40,6 +41,7 @@ function Table() {
   var [stateE, setStateE] = useState(false);
   var [stateG, setStateG] = useState(false);
   var [stateP, setStateP] = useState(false);
+  var [stateR, setStateR] = useState(false);
   var [stateS, setStateS] = useState(false);
 
   function togglePopA() {
@@ -56,6 +58,10 @@ function Table() {
 
   function togglePopP() {
       setStateP(!stateP);
+    };
+
+  function togglePopR() {
+      setStateR(!stateR);
     };
 
   function togglePopS() {
@@ -76,15 +82,16 @@ function Table() {
         </div>
         {stateA ? <Awards toggle={togglePopA} /> : null}
         <div class="col grid">
-          <figure class="effect-ruby">
+          <figure class="effect-ruby" onClick={togglePopR}>
             <img src={resume} alt="img13"/>
             <figcaption>
               <h2><span>Resume</span></h2>
               <p>Professional resume</p>
-              <a href={resumepdf} target="_blank">View more</a>
+
             </figcaption>
           </figure>
         </div>
+        {stateR ? <Resume toggle={togglePopR} /> : null}
         <div class="col grid" >
           <figure class="effect-ruby" onClick={togglePopG}>
             <img src={game} alt="img13"/>
@@ -149,13 +156,18 @@ function Table() {
         </div>
         {stateE ? <Education toggle={togglePopE} /> : null}
         <div class="col grid" >
-          <figure class="effect-ruby">
+          <figure class="effect-ruby hobbies">
             <img src={hobbies} alt="img13"/>
             <figcaption>
               <h2><span>Hobbies</span></h2>
               <p>Tennis - music - basketball - playing videogames - cooking</p>
             </figcaption>
           </figure>
+        </div>
+      </div>
+      <div class="row align-items-center footer">
+        <div class="col grid footer" >
+          <p className="create">Creator:</p> <p>Anish Manne</p>
         </div>
       </div>
     </div>
