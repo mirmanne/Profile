@@ -118,7 +118,7 @@ function Table() {
           <figure class="effect-ruby main">
             <img src={credit} alt="img13"/>
             <figcaption class="contain">
-              <h2><span>Anish Manne</span></h2>
+              <h2><span>Anish &nbsp;Manne</span></h2>
               <img className="profile-pic" src={profile} alt="Anish Manne pic"/>
             </figcaption>
           </figure>

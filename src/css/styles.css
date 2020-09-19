@@ -377,13 +377,23 @@ ul.awards {
   animation: react 2s;
 }
 
+.node {
+  width: 60%;
+  animation: node 2s;
+}
+
+.mongoDB {
+  width: 40%;
+  animation: mongoDB 2s;
+}
+
 .python {
   width: 80%;
   animation: python 2s;
 }
 
 .java {
-  width: 60%;
+  width: 50%;
   animation: java 2s;
 }
 
@@ -393,7 +403,7 @@ ul.awards {
 }
 
 .javascript {
-  width: 40%;
+  width: 70%;
   animation: javascript 2s;
 }
 
@@ -403,6 +413,24 @@ ul.awards {
   }
   100% {
     width: 70%
+  }
+}
+
+@keyframes node {
+  0% {
+    width: 0%
+  }
+  100% {
+    width: 60%
+  }
+}
+
+@keyframes mongoDB {
+  0% {
+    width: 0%
+  }
+  100% {
+    width: 40%
   }
 }
 
@@ -420,7 +448,7 @@ ul.awards {
     width: 0%
   }
   100% {
-    width: 60%
+    width: 50%
   }
 }
 
@@ -438,8 +466,15 @@ ul.awards {
     width: 0%
   }
   100% {
-    width: 40%
+    width: 70%
   }
+}
+
+.subText {
+  margin:auto;
+  text-align: right;
+  color: rgb(180, 0, 0);
+  font-size: 13px;
 }
 
 /* Email Page */

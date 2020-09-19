@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import resumepdf from '../resources/AnishManne_Resume_Aug2020.pdf'
+import resumepdf from '../resources/AnishManne_Resume.pdf'
 
 export default class Projects extends Component {
   handleClick = () => {
